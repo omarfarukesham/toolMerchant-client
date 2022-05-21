@@ -5,7 +5,7 @@ import service3 from '../../../assets/powersow2.jpg'
 
 const Services = () => {
     return (
-        <div>
+        <>
             <div className='mx-auto bg-base-200 shadow-lg p-10 w-full'>
                 <h1 className='text-4xl mb-5 text-secondary text-center text-bold'>Our World Class Tools</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 '>
@@ -19,7 +19,7 @@ const Services = () => {
                             <p>We craft stunning and amazing anti age treatment, to
                                 Remove the ageing agent, we will help you..
                             </p>
-                           
+
                             <div class="card-actions">
                                 <button class="btn btn-secondary text-white">Booking Now</button>
                             </div>
@@ -35,9 +35,9 @@ const Services = () => {
                             <p>We craft stunning and amazing anti age treatment, to
                                 Remove the ageing agent, we will help you..
                             </p>
-                            
+
                             <div class="card-actions">
-                            <button class="btn btn-secondary text-white">Booking Now</button>
+                                <button class="btn btn-secondary text-white">Booking Now</button>
                             </div>
                         </div>
                     </div>
@@ -51,17 +51,17 @@ const Services = () => {
                             <p>We craft stunning and amazing anti age treatment, to
                                 Remove the ageing agent, we will help you..
                             </p>
-                           
+
                             <div class="card-actions">
-                            <button class="btn btn-secondary text-white">Booking Now</button>
+                                <button class="btn btn-secondary text-white">Booking Now</button>
                             </div>
                         </div>
                     </div>
-                   
+
 
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
