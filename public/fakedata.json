@@ -1,0 +1,38 @@
+[
+    {
+      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Inside-Corner-Trowel-04-0205030009.jpg",
+      "price": 4000,
+      "name": "Corner Trowel",
+      "minOrderQty": 100,
+      "stock": 20000,
+      "details": "These are more common than the outside corner trowel, just because corner aid is used on the outside corners."
+    },
+   
+    {
+      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Pick-Axe-13-0205030009.jpg",
+      "price": 1000,
+      "name": "Pick Axe",
+      "minOrderQty": 60,
+      "stock": 200,
+      "details": "It is employed for rough dressing of stones and to split the stones in the quarry. It has a long head pointed at both ends."
+    },
+   
+    {
+      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Mash-Hammer-%E2%80%93-Image-18-0205030009-e1553250304783.jpg",
+      "price": 500,
+      "name": "Mash Hammer",
+      "minOrderQty": 40,
+      "stock": 200,
+      "details": "A mash hammer is also known as a stone mason’s hammer. It is used to hit and drive chisel for rough dressing of stone."
+    },
+   
+    {
+      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Circular-Saw-40-0205030009.jpg",
+      "price": 300,
+      "name": "Circular Saw",
+      "minOrderQty": 20,
+      "stock": 300,
+      "details": "A circular saw is either hand held or affixed to a substrate. It runs on electricity and is provided with a toothed"
+    }
+
+  ]

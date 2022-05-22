@@ -5,6 +5,7 @@ import Blogs from './Components/Pages/Blogs';
 import Contact from './Components/Pages/Contact';
 import Home from './Components/Pages/Home/Home';
 import Products from './Components/Pages/Products';
+import Purchase from './Components/Pages/Purchase';
 // import Home from './Components/Pages/Home/Home';
 
 import Login from './Components/Security/Login';
@@ -22,6 +23,11 @@ function App() {
         <Route path='/products' element={
           <RequireAuth>
             <Products />
+          </RequireAuth>
+        }></Route>
+        <Route path='/purchase/:id' element={
+          <RequireAuth>
+            <Purchase />
           </RequireAuth>
         }></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
