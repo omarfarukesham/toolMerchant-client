@@ -21,6 +21,10 @@ import RequireAuth from './Components/Security/RequireAuth';
 import SignUp from './Components/Security/SignUp';
 import Navbar from './Components/Shared/Navbar';
 import Navbar2 from './Components/Shared/Navbar2';
+import AddProduct from './Components/Security/Dashboard/AddProduct';
+import Profile from './Components/Security/Dashboard/Profile';
+import ManageOrder from './Components/Security/Dashboard/ManageOrder';
+import UpdateProfile from './Components/Security/Dashboard/UpdateProfile';
 
 function App() {
   return (
@@ -47,9 +51,14 @@ function App() {
         }>
           <Route index element={<MyOrder2></MyOrder2>}></Route>
           <Route path='MyReview' element={<MyReview></MyReview>}></Route>
+          <Route path='profile' element={<Profile></Profile>}></Route>
+          <Route path='updateProfile' element={<UpdateProfile></UpdateProfile>}></Route>
+
           {/* <Route path='payment/:id' element={<Payment></Payment>}></Route> */}
-          <Route path='Users' element={<Users></Users>}></Route>
-          <Route path='addDoctor' element={<RequireAdmin><AddAdmin></AddAdmin></RequireAdmin>}></Route>
+         
+          <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='Users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='manageOrder' element={<RequireAdmin><ManageOrder></ManageOrder></RequireAdmin>}></Route>
 
         </Route>
 

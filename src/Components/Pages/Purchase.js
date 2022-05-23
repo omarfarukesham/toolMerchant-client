@@ -11,7 +11,7 @@ const Purchase = () => {
     const { id } = useParams()
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate()
-    const { data, isLoading } = useQuery('available', () => fetch(`http://localhost:5000/products/${id}`).then(res => res.json())
+    const { data, isLoading } = useQuery('available', () => fetch(`http://localhost:4000/products/${id}`).then(res => res.json())
     )
 
     // react need loading time here is the loader...................................
@@ -34,10 +34,11 @@ const Purchase = () => {
             product:data.name,
             name: user.displayName,
             email: user.email,
+            price: data.price,
             phone: event.target.phone.value,
             orderQty: qty
         }
-        fetch('http://localhost:5000/order', {
+        fetch('http://localhost:4000/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -50,7 +51,7 @@ const Purchase = () => {
             .then(data => {
                 if(data){
                     toast.success('Your Order has submitted successfully.')
-                    navigate('/myOrder')
+                    navigate('/Dashboard')
                 }
             })
        
@@ -73,59 +74,17 @@ const Purchase = () => {
                     <figure><img src={data?.image} alt="Shoes" /></figure>
                 </div>
                 <div class="card bg-base-100 shadow-xl">
-                <form onSubmit={orderSubmit} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
+                <form onSubmit={orderSubmit} className='grid grid-cols-1 gap-3 justify-items-center my-5'>
                         <input type="text" name='product' disabled value={data?.name} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="name" disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
+                        <input type="number" name="price" disabled value={data?.price || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
-                       <p className='text-red-500'> {QtyErr}</p>
+                        <p className='text-red-500'> {QtyErr}</p>
                         <input type="text" name="Qty" placeholder="Quantity" className="input input-bordered w-full max-w-xs" />
-                        <input type="submit" value="Submit" className="btn btn-secondary w-full max-w-xs" />
+                        <input type="submit" value="Order Submit" className="btn btn-secondary w-full max-w-xs" />
                     </form>
-                    {/* <form onSubmit={orderSubmit}>
-                        <div class="card-body">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Name</span>
-                                </label>
-                                <input name='name' type="text" placeholder="Name" value={user?.displayName} disabled class="input input-bordered" />
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Email</span>
-                                </label>
-                                <input name='email' type="email" value={user?.email} disabled class="input input-bordered" />
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Address</span>
-                                </label>
-                                <input name='address' type="text" placeholder="Address" class="input input-bordered" />
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Phone</span>
-                                </label>
-                                <input name='number' type="number" placeholder="Phone No" class="input input-bordered" />
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Country</span>
-                                </label>
-                                <input name='country' type="text" placeholder="Country" class="input input-bordered" />
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Order Qty</span>
-                                </label>
-                                <input name='orderQty' type="number" placeholder="Order Qty" class="input input-bordered" />
-                            </div>
-                            <div class="form-control mt-6">
-                            <input type="submit" value="Submit" className="btn btn-secondary w-full max-w-xs" />
-                            </div>
-                        </div>
-                    </form> */}
-
+                   
                 </div>
 
 

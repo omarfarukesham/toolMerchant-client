@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
-import service1 from '../../../assets/masonary.jpg'
-import service2 from '../../../assets/mixing.jpg'
-import service3 from '../../../assets/powersow2.jpg'
-import Loading from '../../Shared/Loading';
-import Products from '../Products';
-import SingleProduct from './SingleProduct';
+
 
 const Services = () => {
     const [products, setProducts] = useState([])
@@ -21,14 +15,6 @@ const Services = () => {
         navigate(`/purchase/${id}`);
       };
 
-    //using react query for loading appointment data..................................
-    // const { data: products, isLoading } = useQuery('available', () => fetch('http://localhost:5000/products').then(res => res.json())
-    // )
-
-    // //react need loading time here is the loader...................................
-    // if (isLoading) {
-    //     return <Loading></Loading>
-    // }
 
     return (
         <>

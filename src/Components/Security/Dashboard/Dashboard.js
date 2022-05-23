@@ -13,7 +13,7 @@ const Dashboard = () => {
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content flex flex-col">
                 {/* <!-- Page content here --> */}
-                <h1 className='text-2xl text-purple-500 text-bold'>Welcome to my Dashboard</h1>
+                <h1 className='text-2xl text-purple-500 text-bold'>Dashboard - </h1>
                 <Outlet></Outlet>
                 <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
@@ -22,14 +22,15 @@ const Dashboard = () => {
                 <label for="my-drawer-2" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content mb-2">
                     {/* <!-- Sidebar content here --> */}
-                    <li><Link to="/Dashboard">My Order</Link></li>
-                    <li><Link to='/Dashboard/MyReview'>My Review</Link></li>
-                    <li><Link to='/Dashboard/Users'>Users</Link></li>
+                    <li><Link to="/Dashboard">MyOrder</Link></li>
+                    <li><Link to='/Dashboard/MyReview'>MyReview</Link></li>
+                    <li><Link to='/Dashboard/Profile'>Profile</Link></li>
+                 
 
                     {admin && <>
-                        <li><Link to='/Dashboard/Users'>Users</Link></li>
-                        <li><Link to='/Dashboard/addUser'>Add a user</Link></li>
-                        <li><Link to='/Dashboard/AddAdmin'>Manage Admin</Link></li>
+                        <li className='bg-secondary text-white my-2 rounded-lg' ><Link to='/Dashboard/Users'>MakeAdmin</Link></li>
+                        <li className='bg-secondary text-white my-2 rounded-lg' ><Link to='/Dashboard/addProduct'>AddProduct</Link></li>
+                        <li className='bg-secondary text-white my-2 rounded-lg' ><Link to='/Dashboard/manageOrder'>ManageOrder</Link></li>
                     </>}
                 </ul>
 
