@@ -36,9 +36,13 @@ const Navbar2 = () => {
               <li><Link to="/Blogs">Blogs</Link> </li>
               <li><Link to="/products">Products</Link></li>
               <li><Link to="/Contact">AddProduct</Link></li>
-              <li><Link to="/Contact">Dashboard</Link></li>
+              
               {
-                user ? <button onClick={logout} className='btn btn-secondary btn-sm mt-2'>SignOut</button> :<li><Link to="/login">Login</Link></li>
+                user ? 
+                <>
+                <li><Link to="/Dashboard">Dashboard</Link></li>
+                <button onClick={logout} className='btn btn-secondary btn-sm mt-2'>SignOut</button>
+                </> : <li><Link to="/login">Login</Link></li>
               }
           </ul>
         </div>
