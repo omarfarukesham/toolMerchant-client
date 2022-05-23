@@ -23,7 +23,7 @@ const Purchase = () => {
         event.preventDefault()
       const qty = event.target.Qty.value;
 
-        if (qty > data.stock || qty < data.minOrderQty) {
+        if (qty > parseInt(data.stock) || qty < parseInt( data.minOrderQty)) {
             
             const msg = 'Sorry quantity, minOrder need balance , Ensure please';
             setQtyErr(msg)
@@ -64,8 +64,8 @@ const Purchase = () => {
                 <div class="card  bg-base-100 shadow-xl">
                     <div class="card-body">
                         <h2 class="card-title">Name: {data?.name}!</h2>
-                        <h2 class="card-title">Available :{data?.stock}</h2>
-                        <h2 class="card-title text-purple-500">MinOrder :{data?.minOrderQty}</h2>
+                        <h2 class="card-title">Available :{parseInt(data?.stock)}</h2>
+                        <h2 class="card-title text-purple-500">MinOrder :{parseInt(data?.minOrderQty)}</h2>
                         <h2 class="card-title font-bold text-orange-500">LodPrice :${data?.price}</h2>
                         <h2 class="card-title font-bold text-orange-500">Shipping :$15</h2>
 
