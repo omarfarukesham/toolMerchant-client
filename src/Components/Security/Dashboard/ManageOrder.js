@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading';
 
@@ -12,7 +12,7 @@ const ManageOrder = () => {
         return <Loading></Loading>
     }
 
-    console.log(data)
+    // console.log(orders)
     return (
         <div class="overflow-x-auto">
             <h1 className='text-center text-3xl font-bold py-5 text-secondary'>Total Orders -{data.length}</h1>
@@ -29,7 +29,7 @@ const ManageOrder = () => {
                 </thead>
                 <tbody>
                 {
-                        data.map((order, index) => <>
+                        data?.map((order, index) => <>
                             <tr>
                                 <th>{index+1}</th>
                                 <td>{order?.product}</td>
