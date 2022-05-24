@@ -25,6 +25,7 @@ import AddProduct from './Components/Security/Dashboard/AddProduct';
 import Profile from './Components/Security/Dashboard/Profile';
 import ManageOrder from './Components/Security/Dashboard/ManageOrder';
 import UpdateProfile from './Components/Security/Dashboard/UpdateProfile';
+import Payment from './Components/Security/Dashboard/Payment';
 
 function App() {
   return (
@@ -53,8 +54,7 @@ function App() {
           <Route path='MyReview' element={<MyReview></MyReview>}></Route>
           <Route path='profile' element={<Profile></Profile>}></Route>
           <Route path='updateProfile' element={<UpdateProfile></UpdateProfile>}></Route>
-
-          {/* <Route path='payment/:id' element={<Payment></Payment>}></Route> */}
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
          
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='Users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
