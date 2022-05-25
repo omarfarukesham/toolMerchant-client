@@ -3,7 +3,7 @@ import React from 'react';
 const Policy = () => {
     return (
         <div className='mx-auto bg-base-200 shadow-lg p-10 w-full'>
-            <h1 className='text-5xl mb-5 text-secondary text-center font-bold'>Best Policy</h1>
+            <h1 className='text-3xl mb-5 text-secondary text-center font-bold'>Best Policy</h1>
             <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5'>
                 <div className='w-full bg-base-100 mp-5 rounded-xl'>
                     <ul class="steps steps-vertical">

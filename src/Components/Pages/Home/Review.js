@@ -19,7 +19,7 @@ const Review = () => {
 
     return (
         <div className='bg-primary py-10'>
-            <h1 className='text-center text-5xl font-bold text-secondary my-8'>Customer Reviews</h1>
+            <h1 className='text-center text-3xl font-bold text-secondary my-8'>Customer Reviews</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 bg-white mb-20 mx-10'>
 
                 {
@@ -34,7 +34,8 @@ const Review = () => {
 
                                     </div>
                                 </div>
-                                <h2 class="card-title">{review.name}</h2>
+                                <h2 class="card-title">{review?.name}(<small>{review?.country}</small>)</h2>
+                               
                                 <div class="rating">
                                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
                                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" checked />

@@ -4,7 +4,7 @@ const Summary = () => {
     return (
 
         <div className='bg-primary py-10'>
-            <h1 className='my-10 text-center text-5xl font-bold text-secondary'>Summary</h1>
+            <h1 className='my-8 text-center text-3xl font-bold text-secondary'>Summary</h1>
 
             <div class=" grid row-auto stats stats-vertical lg:stats-horizontal shadow text-center bg-primary">
                 <div class="stat">

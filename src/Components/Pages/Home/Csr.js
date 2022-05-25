@@ -6,7 +6,7 @@ import csr1 from '../../../assets/CSR/csr1.jpg'
 const Csr = () => {
     return (
         <>
-            <h1 className='text-4xl text-center font-bold text-secondary my-10'>CSR Contribution</h1>
+            <h1 className='text-3xl text-center font-bold text-secondary my-10'>CSR Contribution</h1>
             <div class="carousel w-full">
                 <div id="item1" class="carousel-item w-full">
                     <img src={csr1} class="w-full" />

@@ -26,6 +26,7 @@ import Profile from './Components/Security/Dashboard/Profile';
 import ManageOrder from './Components/Security/Dashboard/ManageOrder';
 import UpdateProfile from './Components/Security/Dashboard/UpdateProfile';
 import Payment from './Components/Security/Dashboard/Payment';
+import Profile2 from './Components/Pages/Profile';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
         </Route>
 
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/profile' element={<Profile2 />}></Route>
         <Route path='/myOrder' element={<MyOrder />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/login' element={<Login />}></Route>

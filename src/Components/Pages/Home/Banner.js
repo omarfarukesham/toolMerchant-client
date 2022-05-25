@@ -17,10 +17,10 @@ const Banner = () => {
               data-aos='fade-right'
               data-aos-delay='400'
               data-aos-duration='900'
-              class='text-5xl font-bold '
+              class='text-4xl font-bold '
             >
               Professional Tools
-              For each MASONRY
+              For Each <br></br> MASONRY
             </h1>
             <p
               data-aos='fade-right'
