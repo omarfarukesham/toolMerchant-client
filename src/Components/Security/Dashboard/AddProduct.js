@@ -79,21 +79,21 @@ const AddProduct = () => {
     return (
         <>
  
-            <div className='grid lg:grid-cols-1 md:grid-cols-1 mx-10'>
-                <div class="card bg-base-100 shadow-xl">
+            <div className='grid lg:grid-cols-1 md:grid-cols-1 mx-10 sm:mx-10'>
+                <div class="card bg-base-200 shadow-xl py-5 ">
                     <h1 className='text-center font-bold text-secondary text-3xl'>Add Product</h1>
                     <form onSubmit={addProduct} className='grid grid-cols-1 gap-3 justify-items-center my-5'>
                         <input type="text" name='name' placeholder='Proudct Name' required className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="image" placeholder='Product Img url...' className="input input-bordered w-full max-w-xs" />
                         <input type="number" name="price" placeholder='Price' required className="input input-bordered w-full max-w-xs" />
-                        <textarea type="text" name="details" placeholder='Details....' className="input input-bordered w-full max-w-xs" />
+                        <textarea type="text" name="details" placeholder='Details....' className=" input-bordered w-full max-w-xs textarea" />
                         <input type="number" name="stock" placeholder="Quantity" required className="input input-bordered w-full max-w-xs" />
                         <input type="number" name="minOrderQty" placeholder="Sales Lod" required className="input input-bordered w-full max-w-xs" />
 
-                        <input type="submit" value="Save Profile" className="btn btn-secondary w-full max-w-xs" />
+                        <input type="submit" value="Add Product" className="btn btn-secondary w-full max-w-xs" />
                     </form>
                 </div>
-                <div>
+                <div className='mt-5'>
                     <div class="overflow-x-auto w-full">
                         <table class="table w-full">
 

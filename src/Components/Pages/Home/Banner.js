@@ -2,9 +2,9 @@ import React from 'react';
 import banner from '../../../assets/images/banner3.jpg'
 const Banner = () => {
     return (
-        <div class='hero h-screen lg:h-[70vh] bg-primary relative z-10 '>
+        <div class='hero h-screen lg:h-[70vh] bg-primary relative z-10 py-5 '>
         <div class='hero-content flex-col lg:flex-row'>
-          <div className='text-secondary'>
+          <div className='text-secondary ms:text-xl'>
             <p
               data-aos='fade-right'
               data-aos-duration='1000'
@@ -17,16 +17,16 @@ const Banner = () => {
               data-aos='fade-right'
               data-aos-delay='400'
               data-aos-duration='900'
-              class='text-5xl font-bold'
+              class='text-5xl font-bold '
             >
               Professional Tools
-              For Every MASONRY
+              For each MASONRY
             </h1>
             <p
               data-aos='fade-right'
               data-aos-delay='600'
               data-aos-duration='800'
-              class='py-6 max-w-xl'
+              class='py-6 max-w-xl sm:max-w-lg'
             >
               Quality tools can make your professional work more efficient, and safe. We wish to be a best partner
               with our work, so lets explore..... 
