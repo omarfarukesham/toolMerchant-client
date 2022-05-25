@@ -6,9 +6,9 @@ import Blogs from './Components/Pages/Blogs';
 import Contact from './Components/Pages/Contact';
 import Home from './Components/Pages/Home/Home';
 import MyOrder from './Components/Pages/MyOrder';
-import Products from './Components/Pages/Products';
+// import Products from './Components/Pages/Products';
 import Purchase from './Components/Pages/Purchase';
-import AddAdmin from './Components/Security/Dashboard/AddAdmin';
+// import AddAdmin from './Components/Security/Dashboard/AddAdmin';
 import Dashboard from './Components/Security/Dashboard/Dashboard';
 import MyOrder2 from './Components/Security/Dashboard/MyOrder2'
 import Users from './Components/Security/Dashboard/Users';
@@ -19,7 +19,7 @@ import RequireAdmin from './Components/Security/RequireAdmin'
 import Login from './Components/Security/Login';
 import RequireAuth from './Components/Security/RequireAuth';
 import SignUp from './Components/Security/SignUp';
-import Navbar from './Components/Shared/Navbar';
+// import Navbar from './Components/Shared/Navbar';
 import Navbar2 from './Components/Shared/Navbar2';
 import AddProduct from './Components/Security/Dashboard/AddProduct';
 import Profile from './Components/Security/Dashboard/Profile';
@@ -34,11 +34,7 @@ function App() {
       <Navbar2> </Navbar2>
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/products' element={
-          <RequireAuth>
-            <Products />
-          </RequireAuth>
-        }></Route>
+       
         <Route path='/purchase/:id' element={
           <RequireAuth>
             <Purchase />

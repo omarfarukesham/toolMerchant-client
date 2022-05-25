@@ -8,6 +8,7 @@ This app is excellently min user toolMerchant sales system, in which any authent
 
 ## Exclusive feature
 - International payment method in this app you can purchase product directly pay with credit. 
+- More interestingly aos animation make this app comfortable.
 
 ## Usages Technologies
 - React js

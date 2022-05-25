@@ -25,7 +25,7 @@ const Profile = () => {
             education: education
 
         }
-        fetch(`http://localhost:4000/profile/${user?.email}`, {
+        fetch(`https://aqueous-scrubland-33744.herokuapp.com/profile/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -63,11 +63,11 @@ const Profile = () => {
 
         }
         console.log(profileInfo);
-        fetch('http://localhost:4000/profile', {
+        fetch('https://aqueous-scrubland-33744.herokuapp.com/profile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                // authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(profileInfo)
 

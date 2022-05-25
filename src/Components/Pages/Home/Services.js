@@ -6,7 +6,7 @@ const Services = () => {
     const [products, setProducts] = useState([])
      const navigate = useNavigate()
     useEffect(() => {
-        fetch('http://localhost:4000/products')
+        fetch('https://aqueous-scrubland-33744.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products])
@@ -22,7 +22,7 @@ const Services = () => {
                 <h1 className='text-3xl mb-5 text-secondary text-center font-bold'>Tools</h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {
-                        products.map(product => <>
+                        products?.map(product => <>
                             <div className='card bg-base-100 shadow-xl"'>
                                 <figure class="px-10 pt-10">
                                     <img src={product?.image} alt="product" class="rounded-xl object-cover h-48 w-96" />

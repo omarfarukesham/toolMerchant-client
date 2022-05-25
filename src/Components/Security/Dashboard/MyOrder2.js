@@ -14,7 +14,7 @@ const MyOrder2 = () => {
     
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:4000/order?userEmail=${user?.email}`)
+            fetch(`https://aqueous-scrubland-33744.herokuapp.com/order?userEmail=${user?.email}`)
                 .then(res => {
                     if (res.status === 401 || res.status === 403) {
                         navigate('/')
@@ -28,30 +28,11 @@ const MyOrder2 = () => {
     }, [])
 
    
- //using react query for loading appointment data..................................
-//  const { data, isLoading } = useQuery('available', () =>fetch(`http://localhost:4000/order?userEmail=${user?.email}`)
-//  .then(res => {
-//      if (res.status === 401 || res.status === 403) {
-//          navigate('/')
-//          signOut(auth);
-//          localStorage.removeItem('accessToken')
-//      }
-//      return res.json()
-//  })
-//  )
-
- //react need loading time here is the loader...................................
-//  if (isLoading) {
-//      return <Loading></Loading>
-//  }
-
- 
-
 
  const deleteHandler = (id) => {
      const proceed = window.confirm("Are you sure for Delete .........");
      if (proceed) {
-       const url = `http://localhost:4000/order/${id}`;
+       const url = `https://aqueous-scrubland-33744.herokuapp.com/order/${id}`;
        fetch(url, {
          method: "delete",
        })

@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading';
 // import Loading from '../../Shared/Loading';
 
 const Users = () => {
-    const { data, isLoading, refetch } = useQuery('available', ()=>fetch('http://localhost:4000/users',{
+    const { data, isLoading, refetch } = useQuery('available', ()=>fetch('https://aqueous-scrubland-33744.herokuapp.com/users',{
         method: 'GET',
                 headers: {
                     'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
@@ -17,7 +17,7 @@ const Users = () => {
     }
     
     const makeAdmin = (email) =>{
-           fetch(`http://localhost:4000/user/admin/${email}`,{
+           fetch(`https://aqueous-scrubland-33744.herokuapp.com/user/admin/${email}`,{
             method: 'PUT',
             headers: {
                 'authorization' : `Bearer ${localStorage.getItem('accessToken')}`
@@ -55,7 +55,7 @@ const Users = () => {
                 </thead>
                 <tbody>
                     {
-                        data.map((user, index) => <tr>
+                        data?.map((user, index) => <tr>
                             <th>{index + 1}</th>
                             <td>{user.email}</td>
                             <td>{user?.role !== 'admin' ? <button onClick={()=>makeAdmin(user?.email)} class="btn btn-xs">Make Admin</button> : <button  class="btn btn-xs btn-primary">Admin</button> } </td>

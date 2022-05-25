@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading';
 const ManageOrder = () => {
 
     //using react query for loading appointment data..................................
-    const { data, isLoading } = useQuery('available', () => fetch('http://localhost:4000/orders').then(res => res.json())
+    const { data, isLoading } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/orders').then(res => res.json())
     )
     //react need loading time here is the loader...................................
     if (isLoading) {

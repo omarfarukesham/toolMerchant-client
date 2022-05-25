@@ -7,11 +7,11 @@ import Loading from '../../Shared/Loading';
 const Review = () => {
     const [user, loading, error] = useAuthState(auth);
     //using react query for loading appointment data..................................
-    const { data, isLoading } = useQuery('available', () => fetch('http://localhost:4000/review').then(res => res.json())
+    const { data, isLoading } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/review').then(res => res.json())
     )
 
     //react need loading time here is the loader...................................
-    if (isLoading) {
+    if (isLoading || loading) {
         return <Loading></Loading>
     }
 
@@ -20,10 +20,10 @@ const Review = () => {
     return (
         <div className='bg-primary py-10'>
             <h1 className='text-center text-3xl font-bold text-secondary my-8'>Customer Reviews</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 bg-white mb-20 mx-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-20 mx-10'>
 
                 {
-                    data.map(review => <>
+                    data?.map(review => <>
                         <div class="card w-96 bg-base-100 shadow-xl">
                             <div class="card-body">
                                 <div class="avatar">

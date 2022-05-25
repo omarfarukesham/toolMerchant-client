@@ -24,11 +24,11 @@ const MyReview = () => {
             photoURL:photoURL,
             country:country
         }
-        fetch('http://localhost:4000/review', {
+        fetch('https://aqueous-scrubland-33744.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                // authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(reviewInfo)
 

@@ -23,7 +23,7 @@ const AddProduct = () => {
             stock: stock,
             minOrderQty: minOrderQty
         }
-        fetch('http://localhost:4000/products', {
+        fetch('https://aqueous-scrubland-33744.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -45,7 +45,7 @@ const AddProduct = () => {
 
     }
     //using react query for loading appointment data..................................
-    const { data, isLoading } = useQuery('available', () => fetch('http://localhost:4000/products').then(res => res.json())
+    const { data, isLoading } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/products').then(res => res.json())
     )
 
     //react need loading time here is the loader...................................
@@ -61,7 +61,7 @@ const AddProduct = () => {
     const deleteHandler = (id) => {
         const proceed = window.confirm("Are you sure for Delete .........");
         if (proceed) {
-          const url = `http://localhost:4000/product/${id}`;
+          const url = `https://aqueous-scrubland-33744.herokuapp.com/product/${id}`;
           fetch(url, {
             method: "delete",
           })
@@ -115,7 +115,7 @@ const AddProduct = () => {
 
 
                                 {
-                                    data.map((product, index) => <>
+                                    data?.map((product, index) => <>
                                         <tr key={product?._id}>
                                             <th>
                                                {index+1}
@@ -133,7 +133,7 @@ const AddProduct = () => {
                                             <td>{product?.name}</td>
                                             <td>{product?.stock}</td>
                                             <td>${product?.price}</td>
-                                            <td><button onClick={()=>deleteHandler(product._id)} className='btn btn-error btn-xs'>Delete</button></td>
+                                            <td><button onClick={()=>deleteHandler(product?._id)} className='btn btn-error btn-xs'>Delete</button></td>
                                             
                                            
                                         </tr>

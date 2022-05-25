@@ -5,13 +5,13 @@ import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../../Shared/Loading';
 import CheckoutForm from './CheckoutForm';
-import CheckoutForm2 from './CheckoutForm2';
+// import CheckoutForm2 from './CheckoutForm2';
 
 const stripePromise = loadStripe('pk_test_51L17S3Aulic6qQrOWGrbv6XevLHQxjWVo0r53sg6FZULDRq3dEvVlvx6rrXVJG4gDYYKs5ygvXNO1WXApC7dl9x300xr6raBfa');
 
 const Payment = () => {
     const { id } = useParams()
-    const url = `http://localhost:4000/order/${id}`
+    const url = `https://aqueous-scrubland-33744.herokuapp.com/order/${id}`
     // console.log(url)
     const { data:appointment, isLoading } = useQuery(['booking', id], () => fetch(url).then(res => res.json()));
 
