@@ -81,7 +81,7 @@ const Purchase = () => {
                         <input type="number" name="price" disabled value={data?.price || ''} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                         <p className='text-red-500'> {QtyErr}</p>
-                        <input type="text" name="Qty" placeholder="Quantity" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name="Qty" placeholder={"MinOrder "+data?.minOrderQty} className="input input-bordered w-full max-w-xs" />
                         <input type="submit" value="Order Submit" className="btn btn-secondary w-full max-w-xs" />
                     </form>
                    

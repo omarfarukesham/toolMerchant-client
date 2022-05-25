@@ -23,7 +23,7 @@ const Profile2 = () => {
             </div>
 
             <div class="divider mx-10 font-bold text-3xl text-secondary my-10"> Skills in Technologies </div>
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4  bg-primary py-10'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4  bg-base-200 py-10'>
 
                 <div class="indicator mx-5">
                     <span class="indicator-item indicator-center badge badge-accent"></span>
