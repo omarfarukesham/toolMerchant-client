@@ -1,4 +1,4 @@
-# React and NodeJs(toystore App)
+# React and NodeJs(toolMerchant App)
 
 toolMerchant react app live website Link- [Visit Website](https://toolmarchent.web.app/)
 
