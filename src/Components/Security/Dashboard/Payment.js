@@ -26,7 +26,7 @@ const Payment = () => {
             {/* <h1 className='text-red-700 font-bold text-center text-3xl'>Sorry Payment method is temporarily Off, please pay Cash On Delivery....</h1> */}
            {/* price == {parseInt(data[0].price)} */}
 
-           <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
+           <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12" data-aos="fade-up" data-aos-duration="2000">
             <div class="card-body">
                 <p className="text-success font-bold">Hello, {appointment[0]?.name}</p>
                 <h2 class="card-title">Please Pay for {appointment[0]?.product}</h2>

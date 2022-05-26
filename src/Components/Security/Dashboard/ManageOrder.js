@@ -14,7 +14,7 @@ const ManageOrder = () => {
 
     // console.log(orders)
     return (
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" data-aos="fade-up" data-aos-duration="2000">
             <h1 className='text-center text-3xl font-bold py-5 text-secondary'>Total Orders -{data.length}</h1>
             <table class="table w-full">
 

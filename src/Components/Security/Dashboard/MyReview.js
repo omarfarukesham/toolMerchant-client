@@ -18,11 +18,11 @@ const MyReview = () => {
         const photoURL = event.target.photoURL.value
         const country = event.target.country.value
         const reviewInfo = {
-            name:name,
-            rating:rating,
-            details:details,
-            photoURL:photoURL,
-            country:country
+            name: name,
+            rating: rating,
+            details: details,
+            photoURL: photoURL,
+            country: country
         }
         fetch('https://aqueous-scrubland-33744.herokuapp.com/review', {
             method: 'POST',
@@ -45,28 +45,28 @@ const MyReview = () => {
 
     }
 
-    if(loading){
+    if (loading) {
         return <Loading></Loading>
     }
 
     return (
         <>
-            <div className='flex justify-center'>
+            <div className='flex justify-center' data-aos="fade-up" data-aos-duration="2000">
                 <div class="avatar online">
                     <div class="w-24 rounded-full">
                         {
-                            user?.photoURL ? <img src={user?.photoURL} alt="userImage" /> :<><img src="https://api.lorem.space/image/face?hash=28212" alt='unknownImages' /></>
+                            user?.photoURL ? <img src={user?.photoURL} alt="userImage" /> : <><img src="https://api.lorem.space/image/face?hash=28212" alt='unknownImages' /></>
                         }
                     </div>
                 </div>
                 <div>
-                    
+
                 </div>
 
             </div>
-            <p className='text-center my-5 text-2xl font-bold text-secondary'>UserName : {user?.displayName}</p>
+            <p className='text-center my-5 text-2xl font-bold text-secondary' data-aos="fade-up" data-aos-duration="2000">UserName : {user?.displayName}</p>
 
-            <div className='grid lg:grid-cols-1 md:grid-cols-1 mx-10'>
+            <div className='grid lg:grid-cols-1 md:grid-cols-1 mx-10' data-aos="fade-up" data-aos-duration="2000">
                 <div class="card bg-base-200 shadow-xl">
                     <h1 className='text-center font-bold text-secondary text-3xl'>Review</h1>
                     <form onSubmit={addReview} className='grid grid-cols-1 gap-3 justify-items-center my-5'>

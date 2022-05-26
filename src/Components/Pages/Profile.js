@@ -4,16 +4,16 @@ const Profile2 = () => {
     return (
         <>
             {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5'></div> */}
-            <div className='flex justify-center align-middle gap-10 mt-12'>
+            <div className='flex justify-center align-middle gap-10 mt-12' >
                 <div>
-                    <div class="avatar">
+                    <div class="avatar" data-aos="fade-right" data-aos-duration="2000">
                         <div class="w-24 rounded-xl">
                             <img src={omar} />
                         </div>
                     </div>
 
                 </div>
-                <div>
+                <div className='text-secondary' data-aos="fade-left" data-aos-duration="2000">
                     <small>Hi,<br></br>
                         <strong>Omar Faruk(Bangladesh)</strong>, is full-stack-web-developer(MERN),<br></br>
                         6+ years full-time professional working as a Soft skills trainer, Mentor and Coach.
@@ -23,7 +23,7 @@ const Profile2 = () => {
             </div>
 
             <div class="divider mx-10 font-bold text-3xl text-secondary my-10"> Skills in Technologies </div>
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4  bg-base-200 py-10'>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4  bg-base-200 py-10' data-aos="fade-up" data-aos-duration="2000">
 
                 <div class="indicator mx-5">
                     <span class="indicator-item indicator-center badge badge-accent"></span>
@@ -103,7 +103,7 @@ const Profile2 = () => {
 
             <div class="divider font-bold text-3xl text-secondary my-20"> Hire Me </div>
 
-            <div className=''>
+            <div className='' data-aos="fade-up" data-aos-duration="2000">
                 <div class="hero h-screen lg:h-[70vh] bg-base-200">
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <iframe width="699" height="393" src="https://www.youtube.com/embed/iHv6RW3OBdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -125,7 +125,7 @@ const Profile2 = () => {
 
 
             <div class="divider font-bold text-3xl text-secondary my-20"> Experiences</div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-10' data-aos="fade-up" data-aos-duration="2000">
                 <div class="card  bg-base-100 hover:shadow-xl">
                     <div class="card-body text-center">
                         <h2 className='text-xl font-bold text-secondary'>10minschools</h2>
@@ -177,7 +177,7 @@ const Profile2 = () => {
             <div class="divider font-bold text-3xl text-secondary my-20"> Education and Training</div>
 
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-10 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-10 ' data-aos="fade-up" data-aos-duration="2000">
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <div class="avatar flex justify-center">
                         <div class="w-12 rounded-full">

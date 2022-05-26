@@ -3,8 +3,8 @@ import React from 'react';
 const Policy = () => {
     return (
         <div className='mx-auto bg-base-200 shadow-lg p-10 w-full'>
-            <h1 className='text-3xl mb-5 text-secondary text-center font-bold'>Best Policy</h1>
-            <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5'>
+            <h1 className='text-3xl mb-5 text-secondary text-center font-bold' data-aos="fade-up">Best Policy</h1>
+            <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5' data-aos="fade-up" data-aos-duration="1000">
                 <div className='w-full bg-base-100 mp-5 rounded-xl'>
                     <ul class="steps steps-vertical">
                         <li class="step step-secondary">Register</li>
@@ -14,13 +14,13 @@ const Policy = () => {
                         <li class="step">FeedBack us</li>
                     </ul>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 '>
+                <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5' data-aos="fade-up" data-aos-duration="2000">
                     <div class="indicator">
                         <span class="indicator-item badge badge-secondary"></span>
                         <div class="grid w-48  bg-base-100 place-items-center text-center">Make sure your Address and booking Id</div>
                     </div>
 
-                    <div class="indicator">
+                    <div class="indicator" data-aos="fade-up" data-aos-duration="2500">
                         <span class="indicator-item badge badge-secondary"></span>
                         <div class="grid w-48 bg-base-100 place-items-center text-center">
                            
@@ -36,7 +36,7 @@ const Policy = () => {
                     </div>
 
                     <div class="indicator">
-                        <span class="indicator-item badge badge-secondary"></span>
+                        <span class="indicator-item badge badge-secondary" data-aos="fade-up" data-aos-duration="3000"></span>
                         <div class="grid w-48 bg-base-100 place-items-center text-center">
                             <h1>
                             Download Our Policy PDF.................................

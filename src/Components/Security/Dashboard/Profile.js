@@ -85,7 +85,7 @@ const Profile = () => {
     return (
         <>
             <h1 className='text-4xl text-center font-bold text-purple-700 my-5'>My Profile</h1>
-            <div className='grid lg:grid-cols-2 md:grid-cols-1 mx-10'>
+            <div className='grid lg:grid-cols-2 md:grid-cols-1 mx-10' data-aos="fade-up" data-aos-duration="2000">
 
                 <div>
                     <div class="avatar">

@@ -79,7 +79,7 @@ const AddProduct = () => {
     return (
         <>
  
-            <div className='grid lg:grid-cols-1 md:grid-cols-1 mx-10 sm:mx-10'>
+            <div className='grid lg:grid-cols-1 md:grid-cols-1 mx-10 sm:mx-10' data-aos="fade-up" data-aos-duration="2000">
                 <div class="card bg-base-200 shadow-xl py-5 ">
                     <h1 className='text-center font-bold text-secondary text-3xl'>Add Product</h1>
                     <form onSubmit={addProduct} className='grid grid-cols-1 gap-3 justify-items-center my-5'>

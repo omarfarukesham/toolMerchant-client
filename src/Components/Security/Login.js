@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Loading from '../Shared/Loading';
 import useToken from '../../Hooks/useToken';
+import googleImg from '../../assets/google.png'
 
 
 const Login = () => {
@@ -41,7 +42,7 @@ const Login = () => {
     }
 
     return (
-        <div className='flex h-screen justify-center items-center'>
+        <div className='flex h-screen justify-center items-center' data-aos="fade-up" data-aos-duration="2000">
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Login</h2>
@@ -104,7 +105,7 @@ const Login = () => {
                     <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline"
-                    >Continue with Google</button>
+                    ><img class="w-10 rounded-full p-2" src={googleImg} alt="gImages" /> Continue with Google</button>
                 </div>
             </div>
         </div >

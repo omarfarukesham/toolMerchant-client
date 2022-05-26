@@ -47,7 +47,7 @@ const MyOrder2 = () => {
 
 
     return (
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" data-aos="fade-up" data-aos-duration="2000">
             <table class="table w-full">
 
                 <thead>

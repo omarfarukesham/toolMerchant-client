@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
     const [products, setProducts] = useState([])
-     const navigate = useNavigate()
+    const navigate = useNavigate()
     useEffect(() => {
         fetch('https://aqueous-scrubland-33744.herokuapp.com/products')
             .then(res => res.json())
@@ -13,7 +13,7 @@ const Services = () => {
 
     const purchaseHandler = (id) => {
         navigate(`/purchase/${id}`);
-      };
+    };
 
 
     return (
@@ -23,7 +23,7 @@ const Services = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {
                         products?.map(product => <>
-                            <div className='card bg-base-100 shadow-xl"'>
+                            <div className='card bg-base-100 shadow-xl' data-aos="fade-up" data-aos-duration="2000">
                                 <figure class="px-10 pt-10">
                                     <img src={product?.image} alt="product" class="rounded-xl object-cover h-48 w-96" />
                                 </figure>
