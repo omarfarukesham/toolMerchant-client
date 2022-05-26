@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../../firebase.init';
@@ -6,16 +6,27 @@ import Loading from '../../Shared/Loading';
 
 const Review = () => {
     const [user, loading, error] = useAuthState(auth);
-    //using react query for loading appointment data..................................
-    const { data, isLoading } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/review').then(res => res.json())
-    )
 
-    //react need loading time here is the loader...................................
-    if (isLoading || loading) {
-        return <Loading></Loading>
-    }
+    const [datas ,setDatas] = useState([])
+    
+    useEffect(()=>{
+        fetch('https://aqueous-scrubland-33744.herokuapp.com/review')
+        .then(res => res.json())
+        .then(datas => setDatas(datas))
+    },[])
 
-    // console.log(user)
+
+
+    // //using react query for loading appointment data..................................
+    // const { data, isLoading } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/review').then(res => res.json())
+    // )
+
+    // //react need loading time here is the loader...................................
+    // if (isLoading || loading) {
+    //     return <Loading></Loading>
+    // }
+
+    // console.log(data)
 
     return (
         <div className='bg-primary py-10'>
@@ -23,7 +34,7 @@ const Review = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-20 mx-10'>
 
                 {
-                    data?.map(review => <>
+                    datas && datas?.map(review => <>
                         <div class="card w-96 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-duration="2000">
                             <div class="card-body">
                                 <div class="avatar">

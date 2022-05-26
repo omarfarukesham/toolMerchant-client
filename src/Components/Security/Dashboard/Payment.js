@@ -23,6 +23,7 @@ const Payment = () => {
     return (
         <>
             <h1>payment id = {id}</h1>
+            <h1 className='text-center font-bold'>DinnersClub Fake card = 3056930009020004 </h1>
             {/* <h1 className='text-red-700 font-bold text-center text-3xl'>Sorry Payment method is temporarily Off, please pay Cash On Delivery....</h1> */}
            {/* price == {parseInt(data[0].price)} */}
 
