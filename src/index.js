@@ -5,6 +5,7 @@ import App from './App';
 import "react-toastify/dist/ReactToastify.css";
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import {
   QueryClient,
   QueryClientProvider,
@@ -14,13 +15,16 @@ const queryClient = new QueryClient()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <HelmetProvider> 
      <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+      <React.StrictMode>
         <App />
+        </React.StrictMode>
       </BrowserRouter>
     </QueryClientProvider>
-  </React.StrictMode>
+
+  </HelmetProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

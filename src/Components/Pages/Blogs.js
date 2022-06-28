@@ -1,70 +1,117 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const Blogs = () => {
+    let name = {
+        text: `var input = []; // initialise an empty array
+        var temp = '';
+        do {
+            temp = prompt("Enter a number. Press cancel or leave empty to finish.");
+            if (temp === "" || temp === null) {
+                break;
+            } else {
+                input.push(temp);  // the array will dynamically grow
+            }
+        } while (1);`,
+        language: 'js'
+    }
     return (
         <>
-            {/* <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5'></div> */}
-            <div class="divider mx-10 font-bold text-3xl text-secondary my-10"> Question And Answer </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                <div class="card w-96 bg-base-100 hover:shadow-xl">
-                    <div class="card-body">
-                        <h3 class="text-xl">#01 - How will you improve the performance of a React Application?</h3>
-                        <ul>
-                            <li>-components should receive only necessary props at once.</li>
-                            <li>-Avoid unnecessary non optimized image</li>
-                            <li>-Careful with rerendering with components</li>
-                            <li>-Should avoid over css animation</li>
-                            <li>-Analytics tracking libraries can reduce performace of react app</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card w-96 bg-base-100 hover:shadow-xl">
-                    <div class="card-body">
-                        <h3 class="text-xl text-accent">#02 - What are the different ways to manage a state in a React application?</h3>
-                        <ul>
+            <Helmet>
+                <title>Blogs</title>
+            </Helmet>
+            <div>
+            <h1 className='text-center font-bold text-3xl my-10 text-secondary'><i class="fa-solid fa-highlighter px-2"></i>My Blogs(Under Developing......)</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 lg:mx-5 mx-10 mb-10'>
+                <div>
+                    <h1 className='text-2xl font-bold text-secondary'> <i class="fa-solid fa-triangle-exclamation mx-2"></i>Problem & Solution</h1>
+                    <>
 
-                            <li>-hooks allow to manage state in react app.</li>
-                            <li>-Redux is the nice solution for manage state in react app.</li>
-                            <li>-reactQuery is also a great tools to manage react state in app.</li>
-                            <li>-using localstorage for functional component to maintain state in app.</li>
-                        </ul>
-                    </div>
+                        <p className='font-bold mt-10'>Problem - What is the dynamic Array ?</p>
+                        <article> <span className='font-bold'>Solution -</span> A dynamic array is an array with a big improvement: automatic resizing.<br></br>
+                            One limitation of arrays is that they're fixed size,
+                            meaning you need to specify the number of elements your array will hold ahead of time.
+                            A dynamic array expands as you add more elements. So you don't need to determine the size ahead of time. </article>
+                        <small>
+                            Coding Example -
+                            <CopyBlock
+                                text={name.text}
+                                language={'js'}
+                                theme={dracula}
+                            />
+                        </small>
+                    </>
+                    <>
+
+                        <p className='font-bold mt-10'>Problem - What is the dynamic Array ?</p>
+                        <article> <span className='font-bold'>Solution -</span> A dynamic array is an array with a big improvement: automatic resizing.<br></br>
+                            One limitation of arrays is that they're fixed size,
+                            meaning you need to specify the number of elements your array will hold ahead of time.
+                            A dynamic array expands as you add more elements. So you don't need to determine the size ahead of time. </article>
+                        <small>
+                            Coding Example -
+                            <CopyBlock
+                                text={name.text}
+                                language={'js'}
+                                theme={dracula}
+                            />
+                        </small>
+                    </>
+                    <>
+
+                        <p className='font-bold mt-10'>Problem - What is the dynamic Array ?</p>
+                        <article> <span className='font-bold'>Solution -</span> A dynamic array is an array with a big improvement: automatic resizing.<br></br>
+                            One limitation of arrays is that they're fixed size,
+                            meaning you need to specify the number of elements your array will hold ahead of time.
+                            A dynamic array expands as you add more elements. So you don't need to determine the size ahead of time. </article>
+                        <small>
+                            Coding Example -
+                            <CopyBlock
+                                text={name.text}
+                                language={'js'}
+                                theme={dracula}
+                            />
+                        </small>
+                    </>
                 </div>
-                <div class="card w-96 bg-base-100 hover:shadow-xl">
-                    <div class="card-body">
-                        <h3 class="text-xl">#03- Why you do not set the state directly in React. For example, if you have `const [products, setProducts] = useState([])`. Why you do not set `products = [...]` instead, you use the `setProducts`?</h3>
-                        <p>
-                            it we do use state the directly that will automatically replace all data  that is depend on the state.
-                            if we use spread operator "[...], "
-                            that will help us to keep existing data on the state in which preset, futhermore,
-                            new data will add with existing data in that state.
-                        </p>
+                <div>
+                    <h1 className='text-center font-bold text-2xl text-secondary'><i class="fa-solid fa-file-arrow-down mx-2"></i>Download High Frequency Interview Question</h1>
+                    <div className='mt-12 mx-5'>
+                        <a href='https://drive.google.com/file/d/1aBsOMTvSUIlZdd7tldEiWRf7T1vRVyNL/view?usp=sharing' target='_black' className=' bg-base-200 text-secondary font-bold p-2 rounded-xl text-center' download>Html5 Interview Q&A</a>
                     </div>
-                </div>
-                <div class="card w-96 bg-base-100 hover:shadow-xl">
-                    <div class="card-body">
-                        <h3 class="text-xl">#04 - How does prototypical inheritance work?</h3>
-                        <p>
-                            Each object has a private property which holds a link to another object called its prototype.
-                             That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype.
-                              By definition, null has no prototype, and acts as the final link in this prototype chain.
-                            Nearly all objects in JavaScript are instances of Object, which has null as its prototype.
-                            Ref: MDN web docs..
-                        </p>
+                    
+
+                    <div className='mt-5 mx-5'>
+                        <a href='https://drive.google.com/file/d/1aBsOMTvSUIlZdd7tldEiWRf7T1vRVyNL/view?usp=sharing' target='_black'
+                         className=' bg-base-200 text-secondary font-bold p-2 rounded-xl text-center' download>CSS3 Interview Question&Answer</a>
                     </div>
-                </div>
-                <div class="card w-96 bg-base-100 hover:shadow-xl">
-                    <div class="card-body">
-                        <h3 class="text-xl">#05 - What is a unit test? Why should write unit tests?</h3>
-                        <p>
-                        Unit test is an significant algorithom process to finish the task perfectly, 
-                        it can help us to figure out the flaws of programe that developer is writing. this tools also can benefits our programming 
-                        efficieny in real time.
-                         Moreover, this test teach us to follow the coding standred globally. A lot of advantage available for developer for using the unit test.
-                        </p>
+                    <div className='mt-5 mx-5'>
+                        <a href='https://docs.google.com/document/d/199HtISoCJSrx840gRccnXsKhmctOHRm88kNcHF7FS6g/edit?usp=sharing' target='_black'
+                         className=' bg-base-200 text-secondary font-bold p-2 rounded-xl text-center' download>Javascript Interview Question&Answer</a>
                     </div>
+                    <div className='mt-5 mx-5'>
+                        <a href='https://docs.google.com/document/d/1VT84Hpoqt3XtdTQEx11ja3Ryz0lnL7lGrpSGL79Uaiw/edit?usp=sharing' target='_black'
+                         className=' bg-base-200 text-secondary font-bold p-2 rounded-xl text-center' download>ES6 Interview Question&Answer</a>
+                    </div>
+                    <div className='mt-5 mx-5'>
+                        <a href='https://docs.google.com/document/d/1tDwgHKAJ06IcT24ZACHqCvBtN4R156UIyNx6j81xtUc/edit?usp=sharing' target='_black'
+                         className=' bg-base-200 text-secondary font-bold p-2 rounded-xl text-center' download>ReactJs Interview Question&Answer</a>
+                    </div>
+                    <div className='mt-5 mx-5'>
+                        <a href='https://docs.google.com/document/d/13BdWUYNNAd1Zv2etyxzldoLgtNNKLS1GXZoVhmiAa4g/edit?usp=sharing' target='_black'
+                         className=' bg-base-200 text-secondary font-bold p-2 rounded-xl text-center' download>NodeJS Interview Question&Answer</a>
+                    </div>
+
+                    <div className='mt-5 mx-5'>
+                        <a href='https://drive.google.com/file/d/1zdQNixCoFTKSKSLftu3FdOkd2rs-kL5I/view?usp=sharing' target='_black' className=' bg-base-200 text-secondary font-bold p-2 rounded-xl text-center' download>Emergency Toolkits(html,css,js,React)</a>
+                    </div>
+
+
                 </div>
             </div>
+
+        </div>
 
         </>
     );
