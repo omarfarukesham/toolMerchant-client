@@ -21,6 +21,7 @@ import RequireAuth from './Components/Security/RequireAuth';
 import SignUp from './Components/Security/SignUp';
 // import Navbar from './Components/Shared/Navbar';
 import Navbar2 from './Components/Shared/Navbar2';
+import Navbar3 from './Components/Shared/Navbar3';
 import AddProduct from './Components/Security/Dashboard/AddProduct';
 import Profile from './Components/Security/Dashboard/Profile';
 import ManageOrder from './Components/Security/Dashboard/ManageOrder';

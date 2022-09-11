@@ -1,8 +1,8 @@
 import React from 'react';
-import banner from '../../../assets/images/banner3.jpg'
+import banner from '../../../assets/images/hBanner2.png'
 const Banner = () => {
     return (
-        <div class='hero h-screen lg:h-[70vh] bg-primary relative z-10 py-5 '>
+        <div class='hero h-screen lg:h-[70vh] relative py-5 '>
         <div class='hero-content flex-col lg:flex-row'>
           <div className='text-secondary ms:text-xl'>
             <p
@@ -19,8 +19,8 @@ const Banner = () => {
               data-aos-duration='1000'
               class='text-4xl font-bold '
             >
-              Professional Tools
-              For Each <br></br> MASONRY
+              Watch
+              For  Elitism
             </h1>
             <p
               data-aos='fade-right'
@@ -28,15 +28,13 @@ const Banner = () => {
               data-aos-duration='2000'
               class='py-6 max-w-xl sm:max-w-lg'
             >
-              Quality tools can make your professional work more efficient, and safe. We wish to be a best partner
-              with our work, so lets explore..... 
+              Simple we believe business Ethics, so No compromised with the right sourcing 
             </p>
             <button
-              data-aos='zoom-in'
-              data-aos-delay='2000'
-              class='btn btn-secondary'
+            
+              className='btn btn-secondary text-white'
             >
-             Purchase Now
+            Visit Sourcing
             </button>
           </div>
           <div className='h-[60vh] shrink-0' data-aos="fade-in" data-aos-duration="2000">

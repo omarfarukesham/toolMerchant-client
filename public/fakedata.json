@@ -1,38 +1,55 @@
 [
+  
     {
-      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Inside-Corner-Trowel-04-0205030009.jpg",
+      "image": "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61y+obeuYeL._AC_UL480_FMwebp_QL65_.jpg",
       "price": 4000,
-      "name": "Corner Trowel",
+      "name": "Elite Watch",
       "minOrderQty": 100,
       "stock": 20000,
-      "details": "These are more common than the outside corner trowel, just because corner aid is used on the outside corners."
+      "details": "These are more common than the outside Elite watch, a people who truly love fashion this watch an excellent choice."
     },
    
     {
-      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Pick-Axe-13-0205030009.jpg",
+      "image": "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61OcQNhHnuL._AC_UY327_FMwebp_QL65_.jpg",
       "price": 1000,
-      "name": "Pick Axe",
+      "name": "Apple iPhone 13 Pro Max",
       "minOrderQty": 60,
       "stock": 200,
-      "details": "It is employed for rough dressing of stones and to split the stones in the quarry. It has a long head pointed at both ends."
+      "details": "Latest apple Iphone for exclusive user, it will give you a great user experience"
     },
    
     {
-      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Mash-Hammer-%E2%80%93-Image-18-0205030009-e1553250304783.jpg",
+      "image": "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61Ze2wc9nyS._AC_UY327_FMwebp_QL65_.jpg",
       "price": 500,
-      "name": "Mash Hammer",
+      "name": "MIS Laptop Pro",
       "minOrderQty": 40,
       "stock": 200,
-      "details": "A mash hammer is also known as a stone mason’s hammer. It is used to hit and drive chisel for rough dressing of stone."
+      "details": "32GB Ram, 512 ssd, 12 Hours Battery Backup, three Gorgeious color, and affordable price"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61Ze2wc9nyS._AC_UY327_FMwebp_QL65_.jpg",
+      "price": 500,
+      "name": "MIS Laptop Pro",
+      "minOrderQty": 40,
+      "stock": 200,
+      "details": "32GB Ram, 512 ssd, 12 Hours Battery Backup, three Gorgeious color, and affordable price"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61Ze2wc9nyS._AC_UY327_FMwebp_QL65_.jpg",
+      "price": 500,
+      "name": "MIS Laptop Pro",
+      "minOrderQty": 40,
+      "stock": 200,
+      "details": "32GB Ram, 512 ssd, 12 Hours Battery Backup, three Gorgeious color, and affordable price"
     },
    
     {
-      "image": "https://gharpedias3files.s3.amazonaws.com/uploads/2019/03/Circular-Saw-40-0205030009.jpg",
+      "image": "https://m.media-amazon.com/images/W/WEBP_402378-T2/images/I/61C0f5e2I7L._AC_UY327_FMwebp_QL65_.jpg",
       "price": 300,
-      "name": "Circular Saw",
+      "name": "Hp Pavilion 2022",
       "minOrderQty": 20,
       "stock": 300,
-      "details": "A circular saw is either hand held or affixed to a substrate. It runs on electricity and is provided with a toothed"
+      "details": "15.6 FHD Touchscreen Laptop 11th Gen 4-Core Intel i7-1165G7 32GB DDR4 1TB NVMe SSD Iris Xe Graphics HDMI Webcam WiFi-6 Bluetooth Backlit Keyboard Windows 10 Pro w/ 32GB USB"
     }
 
   ]

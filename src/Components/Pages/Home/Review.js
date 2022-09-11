@@ -17,25 +17,14 @@ const Review = () => {
 
 
 
-    // //using react query for loading appointment data..................................
-    // const { data, isLoading } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/review').then(res => res.json())
-    // )
-
-    // //react need loading time here is the loader...................................
-    // if (isLoading || loading) {
-    //     return <Loading></Loading>
-    // }
-
-    // console.log(data)
-
     return (
-        <div className='bg-primary py-10'>
+        <div className='bg-base-100 py-10'>
             <h1 className='text-center text-3xl font-bold text-secondary my-8' >Customer Reviews</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-20 mx-10'>
 
                 {
                     datas && datas?.map(review => <>
-                        <div class="card w-96 bg-base-100 shadow-xl" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="card w-full bg-base-200 shadow-xl" data-aos="fade-up" data-aos-duration="2000">
                             <div class="card-body">
                                 <div class="avatar">
                                     <div class="w-24 mask mask-hexagon">

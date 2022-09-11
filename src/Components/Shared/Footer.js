@@ -3,7 +3,13 @@ import React from 'react';
 const Footer = () => {
     return (
         <>
-            <footer class="footer p-10 bg-base-200 text-base-content" data-aos="fade-up" data-aos-duration="1000">
+        <h1>Hi this is footer</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#F000B8" fill-opacity="1" d="M0,128L40,144C80,160,160,192,240,181.3C320,171,400,117,480,117.3C560,117,640,171,720,197.3C800,224,880,224,960,202.7C1040,181,1120,139,1200,117.3C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                </path></svg>
+
+
+            {/* <footer class="footer p-10 bg-base-200 text-base-content" data-aos="fade-up" data-aos-duration="1000">
                 <div>
                     <span class="footer-title">Services</span>
                     <a class="link link-hover">Branding</a>
@@ -37,7 +43,7 @@ const Footer = () => {
                         <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
         </>
     );
 };
