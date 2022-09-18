@@ -2,12 +2,14 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <>
-        <h1>Hi this is footer</h1>
+        <div className='relative'>
+
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#F000B8" fill-opacity="1" d="M0,128L40,144C80,160,160,192,240,181.3C320,171,400,117,480,117.3C560,117,640,171,720,197.3C800,224,880,224,960,202.7C1040,181,1120,139,1200,117.3C1280,96,1360,96,1400,96L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
                 </path></svg>
-
+            <div className='absolute top-48'>
+                <h1>Hi this is footer</h1>
+            </div>
 
             {/* <footer class="footer p-10 bg-base-200 text-base-content" data-aos="fade-up" data-aos-duration="1000">
                 <div>
@@ -44,7 +46,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer> */}
-        </>
+        </div>
     );
 };
 
