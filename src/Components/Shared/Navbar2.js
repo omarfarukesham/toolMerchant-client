@@ -33,10 +33,10 @@ const Navbar2 = () => {
                   <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                 </a>
                 <ul className="p-2 bg-gray-800 text-white ">
-                  <li className='hover:bg-base-300 '><a>Cosmetics</a></li>
-                  <li className='hover:bg-base-300 '><a>Electric</a></li>
-                  <li className='hover:bg-base-300 '><a>Cosmetics</a></li>
-                  <li className='hover:bg-base-300 '><a>Cosmetics</a></li>
+                  <li className='hover:bg-base-300 '><Link to="/HealthCare">Health & Personal Care</Link></li>
+                  <li className='hover:bg-base-300 '><Link to="/eProd">Electric</Link></li>
+                  <li className='hover:bg-base-300 '><Link to="/mProd">Man's Accessories</Link></li>
+                  <li className='hover:bg-base-300 '><Link to="/HealthCare">Cosmetics</Link></li>
                 </ul>
               </li>
 
@@ -62,40 +62,40 @@ const Navbar2 = () => {
             <li><Link to="/">Home</Link></li>
 
             <li><Link to="/Blogs">Blogs</Link> </li>
-            <li><Link to="/profile">Profile</Link> </li>
+            {/* <li><Link to="/profile">Profile</Link> </li> */}
             <li tabIndex="0">
               <a>
                 Products
                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
               </a>
               <ul className="p-2 bg-gray-800 text-white ">
-                <li className='hover:bg-base-300 '><a>Cosmetics</a></li>
-                <li className='hover:bg-base-300 '><a>Electric</a></li>
-                <li className='hover:bg-base-300 '><a>Cosmetics</a></li>
-                <li className='hover:bg-base-300 '><a>Cosmetics</a></li>
+                <li className='hover:bg-base-300 '><Link to="/HealthCare">Health & Personal Care</Link></li>
+                <li className='hover:bg-base-300 '><Link to="/eProd">Electric</Link></li>
+                <li className='hover:bg-base-300 '><Link to="/mProd">Man's Accessories</Link></li>
+                <li className='hover:bg-base-300 '><Link to="/HealthCare">Cosmetics</Link></li>
               </ul>
             </li>
 
 
-            <li><Link to="/profile">Contact</Link> </li>
+            <li><Link to="/contact">Contact</Link> </li>
 
             {
               user ?
                 <>
                   <li><Link to="/Dashboard">Dashboard</Link></li>
-                  
+
                   <button onClick={logout} className="btn btn-primary">
-                  <div class="avatar online p-2">
-                    <div class="w-8 rounded-full">
-                      {
-                        user?.reloadUserInfo?.photoUrl ? <img src={user?.reloadUserInfo?.photoUrl} alt="User" /> : <img src="https://api.lorem.space/image/face?hash=28212" />
-                      }
-                      
+                    <div class="avatar online p-2">
+                      <div class="w-8 rounded-full">
+                        {
+                          user?.reloadUserInfo?.photoUrl ? <img src={user?.reloadUserInfo?.photoUrl} alt="User" /> : <img src="https://api.lorem.space/image/face?hash=28212" />
+                        }
+
+                      </div>
                     </div>
-                  </div>
-                  SignOut
-                </button>
-                 
+                    SignOut
+                  </button>
+
                 </> : <li><Link to="/login">Login</Link></li>
             }
           </ul>

@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-const Products = () => {
+const HealthCare = () => {
     const [products, setProducts] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
         fetch('https://aqueous-scrubland-33744.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
-                // const match = data.filter(v => v.name.includes('Health'))
-                setProducts(data.slice(0,8))
+                const match = data.filter(v => v.name.includes('Health'))
+                setProducts(match)
             })
     }, [])
     const purchaseHandler = (id) => {
         navigate(`/purchase/${id}`);
     };
+
     return (
-        <>
-         <div className='mx-auto bg-base-200 shadow-lg p-10 w-full'>
+        <div className='mx-auto bg-base-200 shadow-lg p-10 w-full'>
             <h1 className='text-3xl mb-5 text-secondary text-center font-bold'><i class="fa-solid fa-dolly mx-2 text-secondary"></i>Health & Care Products</h1>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
@@ -40,8 +40,7 @@ const Products = () => {
                 }
             </div>
         </div>
-        </>
     );
 };
 
-export default Products;
+export default HealthCare;

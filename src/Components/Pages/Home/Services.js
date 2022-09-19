@@ -54,8 +54,8 @@ const Services = () => {
                                     <h2 className="card-title">Product - {product?.name}</h2>
                                     <small className='text-bold text-red-500 text-center'> Price ${product?.price}</small>
                                     <div className="card-actions flex justify-between ">
-                                        <label for="my-modal-6" onClick={() => setModalData(product)} class="btn btn-accent  modal-button text-white">Details</label>
-                                        <button onClick={() => purchaseHandler(product?._id)} className="btn btn-secondary text-white">Buy Now</button>
+                                       <div><label for="my-modal-6" onClick={() => setModalData(product)} class="btn btn-accent btn-sm modal-button text-white ">Details</label></div>
+                                        <button onClick={() => purchaseHandler(product?._id)} className="btn btn-secondary btn-sm text-white">Buy Now</button>
                                     </div>
                                 </div>
                             </div>

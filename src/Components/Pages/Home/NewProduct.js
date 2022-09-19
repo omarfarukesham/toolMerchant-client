@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NewProduct = () => {
     return (
@@ -14,7 +15,7 @@ const NewProduct = () => {
                         </h2>
                         <div className="card-actions justify-center">
                          
-                            <button className="badge badge-outline">See More</button>
+                            <Link to="/HealthCare" className="badge badge-outline">See More</Link>
                         </div>
                     </div>
                 </div>
@@ -27,7 +28,7 @@ const NewProduct = () => {
                         </h2>
                         <div className="card-actions justify-center">
                          
-                            <button className="badge badge-outline">See More</button>
+                            <Link to="/eProd" className="badge badge-outline">See More</Link>
                         </div>
                     </div>
                 </div>
@@ -40,7 +41,7 @@ const NewProduct = () => {
                         </h2>
                         <div className="card-actions justify-center">
                          
-                            <button className="badge badge-outline">See More</button>
+                            <Link to="/mProd" className="badge badge-outline">See More</Link>
                         </div>
                     </div>
                 </div>

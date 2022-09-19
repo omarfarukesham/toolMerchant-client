@@ -28,6 +28,9 @@ import ManageOrder from './Components/Security/Dashboard/ManageOrder';
 import UpdateProfile from './Components/Security/Dashboard/UpdateProfile';
 import Payment from './Components/Security/Dashboard/Payment';
 import Profile2 from './Components/Pages/Profile';
+import HealthCare from './Components/Pages/HealthCare';
+import Products from './Components/Pages/Products';
+import ManAccessories from './Components/Pages/Home/ManAccessories';
 
 function App() {
   return (
@@ -53,14 +56,17 @@ function App() {
           <Route path='profile' element={<Profile></Profile>}></Route>
           <Route path='updateProfile' element={<UpdateProfile></UpdateProfile>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
-         
+      
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='Users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='manageOrder' element={<RequireAdmin><ManageOrder></ManageOrder></RequireAdmin>}></Route>
-
         </Route>
 
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/healthCare' element={<HealthCare />}></Route>
+        <Route path='/eProd' element={<Products />}></Route>
+        <Route path='/mProd' element={<ManAccessories />}></Route>
+       
         <Route path='/profile' element={<Profile2 />}></Route>
         <Route path='/myOrder' element={<MyOrder />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
