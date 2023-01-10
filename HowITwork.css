@@ -1,0 +1,12 @@
+.howItwork {
+    color: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+    color: #eae0c2;
+}
+
+.howItwork_headText_color p{
+    font-size: 35px;
+    font:bold;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

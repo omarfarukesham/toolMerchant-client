@@ -14,7 +14,7 @@ const MyOrder2 = () => {
     
     useEffect(() => {
         if (user) {
-            fetch(`https://aqueous-scrubland-33744.herokuapp.com/order?userEmail=${user?.email}`)
+            fetch(`https://toolmerchant-server-production.up.railway.app/order?userEmail=${user?.email}`)
                 .then(res => {
                     if (res.status === 401 || res.status === 403) {
                         navigate('/')
@@ -32,7 +32,7 @@ const MyOrder2 = () => {
  const deleteHandler = (id) => {
      const proceed = window.confirm("Are you sure for Delete .........");
      if (proceed) {
-       const url = `https://aqueous-scrubland-33744.herokuapp.com/order/${id}`;
+       const url = `https://toolmerchant-server-production.up.railway.app/order/${id}`;
        fetch(url, {
          method: "delete",
        })

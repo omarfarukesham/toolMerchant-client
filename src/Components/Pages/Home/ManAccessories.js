@@ -5,7 +5,7 @@ const ManAccessories = () => {
     const [products, setProducts] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/products')
+        fetch('https://toolmerchant-server-production.up.railway.app/products')
             .then(res => res.json())
             .then(data => {
                 const match = data.filter(v => v.name.includes('glass'))
@@ -18,7 +18,7 @@ const ManAccessories = () => {
 
     return (
         <div className='mx-auto bg-base-200 shadow-lg p-10 w-full'>
-            <h1 className='text-3xl mb-5 text-secondary text-center font-bold'><i class="fa-solid fa-dolly mx-2 text-secondary"></i>Health & Care Products</h1>
+            <h1 className='text-3xl mb-5 text-secondary text-center font-bold'><i class="fa-solid fa-dolly mx-2 text-secondary"></i>ManAccessories</h1>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                 {

@@ -5,7 +5,7 @@ const HealthCare = () => {
     const [products, setProducts] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/products')
+        fetch('https://toolmerchant-server-production.up.railway.app/products')
             .then(res => res.json())
             .then(data => {
                 const match = data.filter(v => v.name.includes('Health'))

@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L17S3Aulic6qQrOWGrbv6XevLHQxjWVo0r53
 
 const Payment = () => {
     const { id } = useParams()
-    const url = `https://aqueous-scrubland-33744.herokuapp.com/order/${id}`
+    const url = `https://toolmerchant-server-production.up.railway.app/order/${id}`
     // console.log(url)
     const { data:appointment, isLoading } = useQuery(['booking', id], () => fetch(url).then(res => res.json()));
 

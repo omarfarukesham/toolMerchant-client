@@ -25,7 +25,7 @@ const Profile = () => {
             education: education
 
         }
-        fetch(`https://aqueous-scrubland-33744.herokuapp.com/profile/${user?.email}`, {
+        fetch(`https://toolmerchant-server-production.up.railway.app/profile/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -63,7 +63,7 @@ const Profile = () => {
 
         }
         console.log(profileInfo);
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/profile', {
+        fetch('https://toolmerchant-server-production.up.railway.app/profile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

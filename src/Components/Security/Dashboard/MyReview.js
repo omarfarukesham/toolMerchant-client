@@ -24,7 +24,7 @@ const MyReview = () => {
             photoURL: photoURL,
             country: country
         }
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/review', {
+        fetch('https://toolmerchant-server-production.up.railway.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -11,7 +11,7 @@ const Purchase = () => {
     const { id } = useParams()
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate()
-    const { data, isLoading } = useQuery('available', () => fetch(`https://aqueous-scrubland-33744.herokuapp.com/products/${id}`).then(res => res.json())
+    const { data, isLoading } = useQuery('available', () => fetch(`https://toolmerchant-server-production.up.railway.app/products/${id}`).then(res => res.json())
     )
 
     // react need loading time here is the loader...................................
@@ -38,7 +38,7 @@ const Purchase = () => {
             phone: event.target.phone.value,
             orderQty: qty
         }
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/order', {
+        fetch('https://toolmerchant-server-production.up.railway.app/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

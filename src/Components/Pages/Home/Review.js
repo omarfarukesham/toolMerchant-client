@@ -10,7 +10,7 @@ const Review = () => {
     const [datas ,setDatas] = useState([])
     
     useEffect(()=>{
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/review')
+        fetch('https://toolmerchant-server-production.up.railway.app/review')
         .then(res => res.json())
         .then(datas => setDatas(datas))
     },[])

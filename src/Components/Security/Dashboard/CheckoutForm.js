@@ -14,7 +14,7 @@ const CheckoutForm = ({ appointment }) => {
  
 
     useEffect(() => {
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/create-payment-intent', {
+        fetch('https://toolmerchant-server-production.up.railway.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const CheckoutForm = ({ appointment }) => {
                 appointment: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://aqueous-scrubland-33744.herokuapp.com/order/${_id}`, {
+            fetch(`https://toolmerchant-server-production.up.railway.app/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

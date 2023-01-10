@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading';
 // import Loading from '../../Shared/Loading';
 
 const Users = () => {
-    const { data, isLoading, refetch } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/users', {
+    const { data, isLoading, refetch } = useQuery('available', () => fetch('https://toolmerchant-server-production.up.railway.app/users', {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -17,7 +17,7 @@ const Users = () => {
     }
 
     const makeAdmin = (email) => {
-        fetch(`https://aqueous-scrubland-33744.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://toolmerchant-server-production.up.railway.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

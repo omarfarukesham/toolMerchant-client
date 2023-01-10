@@ -23,7 +23,7 @@ const AddProduct = () => {
             stock: stock,
             minOrderQty: minOrderQty
         }
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/products', {
+        fetch('https://toolmerchant-server-production.up.railway.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -45,7 +45,7 @@ const AddProduct = () => {
 
     }
     //using react query for loading appointment data..................................
-    const { data, isLoading } = useQuery('available', () => fetch('https://aqueous-scrubland-33744.herokuapp.com/products').then(res => res.json())
+    const { data, isLoading } = useQuery('available', () => fetch('https://toolmerchant-server-production.up.railway.app/products').then(res => res.json())
     )
 
     //react need loading time here is the loader...................................
@@ -61,7 +61,7 @@ const AddProduct = () => {
     const deleteHandler = (id) => {
         const proceed = window.confirm("Are you sure for Delete .........");
         if (proceed) {
-          const url = `https://aqueous-scrubland-33744.herokuapp.com/product/${id}`;
+          const url = `https://toolmerchant-server-production.up.railway.app/product/${id}`;
           fetch(url, {
             method: "delete",
           })

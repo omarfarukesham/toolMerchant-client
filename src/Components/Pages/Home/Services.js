@@ -8,7 +8,7 @@ const Services = () => {
   
     const navigate = useNavigate()
     useEffect(() => {
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/products')
+        fetch('https://toolmerchant-server-production.up.railway.app/products')
             .then(res => res.json())
             .then(data => setProducts(data.slice(0, 15)))
     }, [])
@@ -20,7 +20,7 @@ const Services = () => {
 
     const SortProduct = (a) => {
         console.log(a)
-        fetch('https://aqueous-scrubland-33744.herokuapp.com/products')
+        fetch('https://toolmerchant-server-production.up.railway.app/products')
             .then(res => res.json())
             .then(data => {
                 if (a === 'all') {
@@ -59,7 +59,6 @@ const Services = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </>)
                     }
                 </div>
